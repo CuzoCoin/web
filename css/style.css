@@ -883,55 +883,50 @@ a:focus {
     height: auto;
 }
 
-/* Estilos para el reproductor de música */
-.audio-player-container {
+/* Estilos para el control de audio */
+.audio-control {
     position: fixed;
     bottom: 20px;
     right: 20px;
     z-index: 1000;
-}
-
-.music-toggle-btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
     background: rgba(0, 0, 0, 0.7);
-    border: 2px solid #fff;
-    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
     cursor: pointer;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    outline: none;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.music-toggle-btn:hover {
+.audio-control:hover {
     transform: scale(1.1);
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.9);
 }
 
-.music-toggle-btn.playing {
-    animation: pulse 2s infinite;
+.audio-control i {
+    color: #fff;
+    font-size: 24px;
 }
 
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
+.audio-control.playing .fa-volume-up {
+    display: block;
 }
 
-/* Media query para dispositivos móviles */
-@media (max-width: 768px) {
-    .audio-player-container {
-        bottom: 10px;
-        right: 10px;
-    }
+.audio-control.playing .fa-volume-mute {
+    display: none;
+}
+
+.audio-control:not(.playing) .fa-volume-up {
+    display: none;
+}
+
+.audio-control:not(.playing) .fa-volume-mute {
+    display: block;
+}
+
+#backgroundMusic {
+    display: none;
 }
