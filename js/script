@@ -1,1 +1,18 @@
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const music = document.getElementById('background-music');
+        const musicToggle = document.getElementById('music-toggle');
+        let isPlaying = false;
 
+        musicToggle.addEventListener('click', function() {
+            if (isPlaying) {
+                music.pause();
+                musicToggle.classList.remove('playing');
+            } else {
+                music.play();
+                musicToggle.classList.add('playing');
+            }
+            isPlaying = !isPlaying;
+        });
+    });
+</script>
