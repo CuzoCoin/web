@@ -801,3 +801,51 @@ a:hover {
     height: auto;
     background: #0c0116;
 }
+
+/* Estilos para botones sociales en navbar */
+.navbar .social-buttons {
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+}
+
+.navbar .social-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.navbar .social-button .icon {
+    margin-right: 5px;
+}
+
+.navbar .telegram {
+    background: #0088cc;
+}
+
+.navbar .twitter {
+    background: #000000;
+}
+
+.navbar .social-button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* Ajustes responsive */
+@media (max-width: 991px) {
+    .navbar .social-buttons {
+        margin: 10px 0;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .navbar .social-button {
+        padding: 8px 15px;
+    }
+}
